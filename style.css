@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+/* Global css */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar css */
+.navLogo {
+  display: none;
+  margin-left: 200px;
+}
+nav {
+  width: 100vw;
+  height: 70px;
+  background-color: white;
+  position: fixed;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  
+}
+nav ul {
+  width: 100%;
+  float: left;
+  margin-left: 130px;
+  
+}
+nav ul li {
+  
+  display: inline-block;
+  font-weight: 500;
+  line-height: 70px;
+  margin: 0 1rem;
+  padding:0px 35px;
+}
+nav ul li:nth-child(1) {
+  
+  margin-left: 3rem;
+}
+nav ul li a {
+  color: black;
+  font-size: 18px;
+}
+nav ul li:hover a {
+  color: rgb(255, 119, 28);
+}
+
+/* Navbar Icons */
+.navIcons {
+  height: 70px;
+  position: absolute;
+  top: 0;
+  right: 3.6rem;
+  font-size: 20px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+.navIcons i:hover {
+  color: rgb(255, 119, 28);
+}
+
+/* Navbar Drawer css */
+.toggleIcon {
+  float: right;
+  cursor: pointer;
+  padding: 1.3rem;
+  font-size: 20px;
+  display: none;
+}
+#drawer {
+  display: none;
+}
+
+/* banner section */
+.banner {
+  background: url(./img1.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.banner > div {
+  width: 600px;
+  padding: 2rem 8rem 2rem 2rem;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  background-color: rgba(224, 111, 111, 0.644);
+}
+.banner > div h1 {
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  color: white;
+}
+.banner > div p {
+  color: rgba(255, 255, 255, 0.845);
+}
+
+/* order section */
+.order {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  background: linear-gradient(
+    100deg,
+    hsla(324, 100%, 70%, 1) 0%,
+    hsla(46, 100%, 68%, 1) 100%
+  );
+}
+.order > h1 {
+  text-align: center;
+  font-size: 42px;
+  letter-spacing: 3px;
+  color: white;
+  padding: 3rem 0;
+}
+.orderList {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6rem;
+}
+.orderList > div {
+  width: 300px;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 20% 0 20%;
+}
+.orderList > div > div {
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
+}
+.orderList > div img {
+  width: 260px;
+  height: 260px;
+  border-radius: 0 20% 0 0;
+  object-fit: cover;
+}
+.orderList > div h2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 1rem;
+}
+.orderList > div p {
+  margin-bottom: 1rem;
+}
+.order button {
+  padding: 1rem 3rem;
+  background-color: rgba(255, 255, 255, 0.401);
+  color: black;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  margin: 4rem 0;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .toggleIcon {
+    display: block;
+  }
+  .navLogo {
+    display: block;
+    line-height: 70px;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-left: 2rem;
+  }
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 70px;
+    left: -100%;
+    text-align: center;
+    background-color: aliceblue;
+    transition: all 0.4s ease;
+  }
+  nav ul li {
+    display: block;
+  }
+  nav ul li:nth-child(1) {
+    margin: 0 1rem;
+    margin-top: 2rem;
+  }
+  nav ul li a {
+    font-size: 22px;
+    font-weight: 500;
+    padding: 20px 0;
+  }
+  #drawer:checked ~ ul {
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner > div {
+    width: 400px;
+    padding: 1rem 3rem 1rem 1rem;
+    margin-left: 2rem;
+    margin-top: 3rem;
+  }
+  .banner > div h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 555px) {
+  .order > h1 {
+    font-size: 29px;
+    letter-spacing: 2px;
+    padding: 2rem 0;
+  }
+  .orderList {
+    width: 100%;
+    gap: 2.5rem;
+  }
+  .orderList > div {
+    width: 270px;
+    padding: 15px;
+  }
+  .orderList > div > div {
+    width: 240px;
+    height: 240px;
+  }
+  .orderList > div img {
+    width: 240px;
+    height: 240px;
+  }
+  .orderList > div h2 {
+    font-weight: 600;
+    padding: 10px;
+  }
+  .orderList > div p {
+    margin-bottom: 10px;
+  }
+  .order button {
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin: 2rem 0;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 455px) {
+  .navLogo {
+    display: none;
+  }
+  .banner > div {
+    width: 90%;
+    margin: auto;
+    padding: 1rem;
+  }
+  .banner > div h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
